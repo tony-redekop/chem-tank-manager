@@ -5,8 +5,12 @@ project(chem-tank-manager)
 find_package(Qt5Widgets CONFIG REQUIRED)
 
 add_subdirectory(src)
+add_subdirectory(test)
 
 set_target_properties(app PROPERTIES AUTOMOC ON)
 set_target_properties(app PROPERTIES AUTOUIC ON)
+set_target_properties(test PROPERTIES AUTOMOC ON)
+set_target_properties(test PROPERTIES AUTOUIC ON)
 
 target_include_directories(app PRIVATE include)
+target_include_directories(test PRIVATE include)

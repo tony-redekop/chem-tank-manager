@@ -11,6 +11,9 @@ set(HEADER_FILES
 
 list(TRANSFORM HEADER_FILES PREPEND ${CMAKE_SOURCE_DIR}/include/)
 
+set(SOURCE_FILES ${SOURCE_FILES} PARENT_SCOPE)
+set(HEADER_FILES ${HEADER_FILES} PARENT_SCOPE)
+
 # need to include header files for automoc feature to work
 # if not, then automoc will not find headers unless they are located in same
 # directory as source files

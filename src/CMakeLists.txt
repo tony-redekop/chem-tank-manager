@@ -7,6 +7,7 @@ set(SOURCE_FILES
 set(HEADER_FILES
     main_window.hpp
     application.hpp
+    connection.hpp
     )
 
 list(TRANSFORM HEADER_FILES PREPEND ${CMAKE_SOURCE_DIR}/include/)
@@ -19,4 +20,4 @@ set(HEADER_FILES ${HEADER_FILES} PARENT_SCOPE)
 # directory as source files
 add_executable(app ${SOURCE_FILES} ${HEADER_FILES})
 
-target_link_libraries(app Qt5::Widgets)
+target_link_libraries(app Qt5::Widgets Qt5::Sql)

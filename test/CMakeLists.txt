@@ -35,4 +35,4 @@ list(TRANSFORM SOURCE_FILES PREPEND ${CMAKE_SOURCE_DIR}/src/)
 
 add_executable(test ${TEST_FILES} ${SOURCE_FILES} ${HEADER_FILES})
 
-target_link_libraries(test Qt5::Widgets gtest gtest_main)
+target_link_libraries(test Qt5::Widgets Qt5::Sql gtest gtest_main)

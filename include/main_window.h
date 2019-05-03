@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+namespace Ui {
+  class MainWindow;
+}
+
 namespace ctm {
 
 class MainWindow : public QMainWindow 
@@ -11,13 +15,15 @@ class MainWindow : public QMainWindow
   Q_OBJECT
 
   public: 
-    MainWindow();
+    explicit MainWindow(QMainWindow *parent = nullptr);
+    virtual ~MainWindow();
     
   public slots:
  
   signals:
 
   private:
+    Ui::MainWindow *ui;
 };
 
 } // namespace ctm

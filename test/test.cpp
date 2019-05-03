@@ -40,6 +40,7 @@ TEST_F(ApplicationTest, connectToDatabase) {
 }
 */
 
+/*
 TEST_F(ApplicationTest, testQuery) {
   ctm::createConnection();
   QSqlQuery query("select * from T1");
@@ -47,6 +48,10 @@ TEST_F(ApplicationTest, testQuery) {
     QString temperature{query.value(2).toString()};
     qDebug() << temperature;
   }
+}
+*/
+
+TEST_F(ApplicationTest, testBasicForm) {
 }
 
 int main(int argc, char **argv) {

@@ -1,5 +1,5 @@
-#include "application.hpp"
-#include "connection.hpp"
+#include "application.h"
+#include "connection.h"
 #include <iostream>
 
 #include <QSqlQuery>

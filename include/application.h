@@ -1,9 +1,8 @@
-#ifndef CHEM_TANK_MANAGER_APPLICATION_HPP_
-#define CHEM_TANK_MANAGER_APPLICATION_HPP_
+#ifndef CHEM_TANK_MANAGER_APPLICATION_H_
+#define CHEM_TANK_MANAGER_APPLICATION_H_
 
 #include <QApplication>
-
-#include "main_window.hpp"
+#include "main_window.h"
 
 namespace ctm {
 

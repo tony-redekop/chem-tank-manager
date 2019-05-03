@@ -33,6 +33,10 @@ set(TEST_FILES test.cpp)
 list(REMOVE_ITEM SOURCE_FILES main.cpp)
 list(TRANSFORM SOURCE_FILES PREPEND ${CMAKE_SOURCE_DIR}/src/)
 
-add_executable(test ${TEST_FILES} ${SOURCE_FILES} ${HEADER_FILES})
+# need to include header files for automoc feature to work
+# if not, then automoc will not find headers unless located in same
+# directory as source files
+#add_executable(demo ${TEST_FILES} ${SOURCE_FILES} ${HEADER_FILES} ${FORMS})
+add_executable(demo ${TEST_FILES} ${SOURCE_FILES} ${HEADER_FILES})
 
-target_link_libraries(test Qt5::Widgets Qt5::Sql gtest gtest_main)
+target_link_libraries(demo Qt5::Widgets Qt5::Sql gtest gtest_main)
